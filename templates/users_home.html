@@ -1,0 +1,10 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %} 
+{%block title %}All users{% endblock %}
+<!-- prettier-ignore -->
+{%block content %}
+{%for user in users %}
+<li>
+  <img src="{{user.user_image}}" /> {{user.first_name}} {{user.last_name}}
+</li>
+{%endfor %} {% endblock %}
