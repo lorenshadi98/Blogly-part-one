@@ -1,0 +1,36 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %} 
+{%block title %}User details{% endblock %}
+<!-- prettier-ignore -->
+{%block content %}
+<div class="float-container">
+  <div class="float-child">
+    <img src="{{user.user_image}}" class="img-fluid m-3" alt="users image" />
+  </div>
+  <div class="float-child">
+    <h1 class="display-4">{{user.first_name}} {{user.last_name}}</h1>
+  </div>
+  <div class="m-5">
+    <button
+      onclick="location.href='/users/{{user.id}}/edit'"
+      class="btn btn-outline-primary m-2"
+    >
+      Edit User
+    </button>
+    <button
+      onclick="location.href='/users/{{user.id}}/delete'"
+      class="btn btn-outline-danger m-2"
+    >
+      Delete User
+    </button>
+    <button
+      onclick="location.href='/users'"
+      class="btn btn-outline-success m-2"
+    >
+      Return to All users
+    </button>
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+{% endblock %}
