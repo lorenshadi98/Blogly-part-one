@@ -4,7 +4,7 @@
 }
 
 .float-child {
-  width: 10%;
-  float: left;
+  width: 85%;
+  float: right;
   padding: 10px;
 }
